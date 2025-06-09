@@ -44,7 +44,7 @@ int main(void)
         return -1;
     }
 
-    memcpy(pcall, shellcode, strlen(shellcode));
+    memcpy(pcall, shellcode, 64);
     pcall(0, 0);
 
     return 0;
