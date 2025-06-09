@@ -22,6 +22,7 @@
  * [/asm]
  */
 
+#include <stdio.h>
 #include <string.h>
 #include <unistd.h>
 #include <sys/mman.h>
@@ -43,7 +44,7 @@ int main(void)
         return -1;
     }
 
-    memcpy(pcall, shellcode, 64);
+    memcpy(pcall, shellcode, strlen(shellcode));
     pcall(0, 0);
 
     return 0;
